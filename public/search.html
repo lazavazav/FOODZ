@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/pulse/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: #756a7a;">
+    <a class="navbar-brand" style="font-size:50px">Foodz</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="input" type="text" placeholder="Find a Recipe" aria-label="Search">
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit" id="searchBtn">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container" id="top">
+    <!-- favorites tab -->
+ <!-- can't get this to work yet -->
+ <!-- <div class="alert alert-success" id="saveAlert" role="alert">
+  Your recipe was successfully saved in your favorites!
+</div> -->
+
+<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="myFavoritesBtn">
+  Save My Favorite <img src="heart.svg">
+  </button>
+  <div class="collapse" id="collapseExample">
+  <div class="card card-body" id="saved">
+  </div>
+  </div> 
+
+  <!-- stored favorites button  -->
+  <a href="#jumboContainer"><button type="button" class="btn btn-success" aria-label="Close" id="storedFavorites">
+    <span aria-hidden="true">View Favorite Recipe <img src="heart.svg"></span>
+    </button></a>
+
+  </div>
+
+<!-- main container where searched recipes go -->
+<div class="container" id="main">
+
+      <!-- modal for selected recipes -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="recipeIngredients"></p>
+        <span id="recipeInfo"></span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="saveBtn">Save Recipe <img src="heart.svg">
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- container where saved and stored recipes go with an automatic scroll feature when top buttons are clicked -->
+<div class="jumbotron" id="jumboContainer">
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

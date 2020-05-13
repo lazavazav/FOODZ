@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 18rem;
+  margin: 10px;
+}
+
+.alert{    /* not using this alert box but just in case*/
+  display: none;
+}
+
+#top{      /* parent element of my fixed tabs need this*/
+position:relative;
+margin-bottom: 40px;
+z-index: 2;
+}
+
+#main{
+z-index: 1;
+}
+
+#myFavoritesBtn{
+position:fixed;
+left: 0;
+top: 30;
+}
+
+#storedFavorites{
+  position:fixed;
+  right: 0;
+  top:30;
+}
+
+#saved{
+  position:fixed;
+  left: 40;
+  top: 30;
+  background-color: rgb(245, 187, 62);
+}
+

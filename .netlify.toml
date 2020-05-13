@@ -1,0 +1,5 @@
+[dev]
+  framework = "#custom"
+  command = "npm start" # Command to start your dev server
+  port = 8888 # Port that the dev server will be accessible on
+  publish = "public/search.html" 
