@@ -31,7 +31,7 @@ if(input !== ""){
     </div>
   </div>
     `
-     id = searchData.results[i].id;
+    let id = searchData.results[i].id;
     document.querySelector("#main").insertAdjacentHTML("afterbegin", info);
   
     //onclicking see recipe button: grab selected recipe from api based on id
